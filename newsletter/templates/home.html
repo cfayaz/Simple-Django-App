@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{template_title}}</title>
+    </head>
+    <body>
+        <h1>testing : {{template_title}}</h1>
+        <p>{{welcome}}</p>
+        <p>We can also use user and request.user even ifwe have not set that in the context
+        like this {{user}} and {{request.user}}.This is asscoiated with context processors (auth and request) for the TEMPLATE in settings.py</p> 
+        <form method="POST" action="">{% csrf_token %}
+            {{form.as_p}}
+            <input type="Submit" value="Sign Up">
+        </form>
+    </body>
+</html>
